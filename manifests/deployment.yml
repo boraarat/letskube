@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "boraaks-7c39"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "boraaks-7c39"
+  template:
+    metadata:
+      labels:
+        app: "boraaks-7c39"
+    spec:
+      containers:
+        - name: "boraaks-7c39"
+          image: "w452fvbbb.azurecr.io/boraaks"
+          ports:
+          - containerPort: 80
